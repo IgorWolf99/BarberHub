@@ -116,7 +116,7 @@ Na tela de "Editar Usuários", é possível atualizar os dados do usuário, incl
 
 Quando logado como administrador, é possível atualizar e deletar os dados de outros usuários. Além disso, quando logado como adm é exibido uma tabela com os usuários cadastrados, preenchendo automaticamente os campos ao clicar nos nomes, auxiliando no gerenciamento dos dados.
 
-<br> Apenas o administrador pode criar novos usuários.
+**Observação:** Apenas o *administrador* pode criar novos usuários.
 
 ![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/9e272bb7-6f05-4842-ad6b-b38894f1b3d1)
  
@@ -138,15 +138,18 @@ Para executar este projeto, você precisará ter os seguintes requisitos instala
 - Crie o banco de dados "Barber-Shop" no PostgreSQL.
   
 ### Usuário/Senha Banco de Dados
-Altere os campos de usuário e senha no arquivo persistence.xml
+Altere os campos de usuário e senha no arquivo persistence.xml:
 - property name="javax.persistence.jdbc.user" value="SEU USUARIO DO BANCO" 
 - property name="javax.persistence.jdbc.password" value="SUA SENHA DO BANCO"
   
-### Executando o Projeto com Maven
-Execute o comando Maven para compilar, empacotar e executar a aplicação
+### Executando o Projeto
+Execute o comando Java para iniciar o aplicativo a partir do JAR:
+- java -jar target/BarberHub-1.0.jar
+
+Ou, execute comando Maven:
 - mvn exec:java
 
-### Ou, Executando na IDE NetBeans
+Executando na IDE NetBeans
 - Abra o projeto na IDE NetBeans.
 - No painel "Projetos", clique com o botão direito no projeto.
 - Escolha a opção "Run" para executar o projeto.
