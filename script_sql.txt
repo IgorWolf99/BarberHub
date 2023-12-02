@@ -1,0 +1,31 @@
+-- Criar Usuário para o login
+INSERT INTO usuarios (nome, cpf, telefone, senha, perguntaseguranca, respostaseguranca, nivelacesso)
+VALUES 
+('Tester Admin', '88554769266', '(51) 99852-7693', '1234', 'Teste?', 'teste', 1),
+('Tester Usuario', '28535763426', '(51) 92156-1392', '4321', 'Teste2?', 'teste2', 0);
+
+-- Povoar tabela Clientes
+INSERT INTO clientes (nome, telefone, nasc, endereco, cpf, observacao)
+VALUES 
+  ('Alisson Silva', '(51) 1234-5678', '2000-09-19', 'Av Avenue', '123.456.789-01', 'Cliente VIP'),
+  ('Bruna Oliveira', '(51) 2345-6789', '1995-05-12', 'Rua Street', '234.567.890-12', 'Cliente Novo'),
+  ('Carlos Pereira', '(51) 3456-7890', '1988-08-25', 'Praca Square', '345.678.901-23', 'Cliente Antigo'),
+  ('Daniela Costa', '(51) 4567-8901', '1992-02-03', 'Alameda Alley', '456.789.012-34', 'Cliente VIP'),
+  ('Eduardo Santos', '(51) 5678-9012', '1980-11-15', 'Avenida Avenue', '567.890.123-45', 'Cliente Novo'),
+  ('Fernanda Souza', '(51) 6789-0123', '1997-07-07', 'Estrada Road', '678.901.234-56', 'Cliente Antigo'),
+  ('Gabriel Lima', '(51) 7890-1234', '1985-04-18', 'Largo Square', '789.012.345-67', 'Cliente VIP'),
+  ('Heloisa Rocha', '(51) 8901-2345', '1993-10-29', 'Viela Lane', '890.123.456-78', 'Cliente Novo'),
+  ('Igor Costa', '(51) 9012-3456', '1982-06-21', 'Travessa Alley', '901.234.567-89', 'Cliente Antigo'),
+  ('Juliana Oliveira', '(51) 0123-4567', '1999-12-05', 'Passarela Walk', '012.345.678-90', 'Cliente VIP');
+
+-- Povoar tabela Servicos
+INSERT INTO servicos (descricao,valor) values ('Barba Simples',15.00);
+INSERT INTO servicos (descricao,valor) values ('Corte Simples',20.00);
+INSERT INTO servicos (descricao,valor) values ('Barba Especial',20.00);
+INSERT INTO servicos (descricao,valor) values ('Corte Especial',25.00);
+INSERT INTO servicos (descricao,valor) values ('Cabelo + Barba Simp.',35.00);
+INSERT INTO servicos (descricao,valor) values ('Cabelo + Barba Espec.',45.00);
+INSERT INTO servicos (descricao,valor) values ('Sobrancelha',10.00);
+
+
+
