@@ -160,7 +160,7 @@ Executando na IDE NetBeans
 ---    
 
 # Considerações sobre o Desenvolvimento do Projeto
-Esse projeto desenvolvido me proporcionou ampliar muito os meus conhecimentos sobre ambiente de desenvolvimento de softwares, pois me permitiu por em pratica a parte teorica e também me incentivou a buscar através de pesquisas, maneiras diferentes e mais eficientes de atigir o meu objetivo.   
+Esse projeto desenvolvido me proporcionou ampliar os meus conhecimentos sobre ambiente de desenvolvimento de softwares, pois me permitiu por em pratica a parte teorica e também me incentivou a buscar através de pesquisas, maneiras diferentes e mais eficientes de atigir o meu objetivo.   
 
   
 Irei comentar abaixo algumas partes do codigo que achei interessante:  
