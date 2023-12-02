@@ -129,7 +129,7 @@ Para executar este projeto, você precisará ter os seguintes requisitos instala
 - IDE NetBeans (Opcional);
 
 ### Clone o repositório
-- git clone git@github.com:IgorWolf99/AppBarbeiro.git
+- git clone git@github.com:IgorWolf99/BarberHub.git
 
 ### Entre no diretório do projeto
 - cd BarberHub
