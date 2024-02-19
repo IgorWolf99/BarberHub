@@ -52,7 +52,7 @@ O sistema permite:
 ## Diagrama de classes do projeto 
 O projeto foi desenvolvido com base no modelo de classes projetado, o que proporcionou uma compreensão global da arquitetura do sistema.
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/c839e56d-889b-4fc0-8ab8-4581b74ee6c4)
+![diagrama](diagrama.png)
 
 ---
 # Imagens do sistema     
@@ -64,15 +64,15 @@ A tela de login permite que o usuário que está cadastrado no sistema, efetue o
 
 Em situações em que o usuário esquece a senha, é possível recuperar o acesso por meio da pergunta de segurança. Esse campo exibe a pergunta de recuperação associada ao usuário selecionado durante o login.
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/38271bd5-c33e-4ff8-9cf6-07015d11a39a)
+![login1](login1.png)
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/1b895ec9-279b-4119-8c49-fe30512feed4)
+![login2](login2.png)
 
 
 ## Menu    
 O painel de menu exibe de forma organizada as diversas funcionalidades disponíveis no sistema, proporcionando uma navegação intuitiva. Também é apresentado uma barra com informações na parte inferior, onde é exibido o logo do estabelecimento, a data atual, o nome do usuário logado, seu nível de acesso e um botão de logout para uma transição fácil de volta à tela de login. Essa barra estará presente em todas as atividades do usuário no sistema.
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/242c98da-5683-45f2-bc3a-441d4dcca653) 
+![menu](menu.png) 
 
 
 ## Agendamentos 
@@ -86,7 +86,7 @@ Caso a opção seja deletar, ao selecionar o botão "Deletar", o sistema remove 
 
 **Observação:** *Não é possivel deletar os agendamentos feitos por outros usuários.*
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/825eae44-97a0-4646-a485-d1b16a96a158)
+![agendamento](agendamento.png)
 
 
 ## Clientes   
@@ -96,7 +96,7 @@ O botão "Atualizar" permite a modificação dos dados do cliente, aplicando as 
 
 **Observação:** O botão de deletar está disponível apenas para *usuários com nível de acesso Administrador*; para usuários comuns, ao clicar no botão é exibido uma mensagem de acesso negado.
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/a71cd0cd-b70e-4e76-9985-decb7aae43a3)
+![clientes](clientes.png)
 
 ## Serviços 
 Na tela de serviços, é possivel gerenciar os serviços prestados pelo profissional.
@@ -105,7 +105,7 @@ Ao selecionar o serviço desejado, é possível editar o valor padrão do servi�
 
 Também é possível criar um novo serviço, definindo o nome e o valor padrão do mesmo.
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/d4c00938-6127-4184-aa29-27d20b259f83)
+![servicos](servicos.png))
 
 
 ## Usuários (Barbeiros)
@@ -118,7 +118,7 @@ Quando logado como administrador, é possível atualizar e deletar os dados de o
 
 **Observação:** Apenas o *administrador* pode criar novos usuários.
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/9e272bb7-6f05-4842-ad6b-b38894f1b3d1)
+![usuarios](usuarios.png)
  
 
 # Clonando o Repositório
@@ -170,10 +170,10 @@ Irei comentar abaixo algumas partes do codigo que achei interessante:
 ### Design Patterns Singleton
 A utilização do padrão Singleton para capturar informações do usuário no início da aplicação, possibilitou a utilização desses dados em várias situações, principalmente onde era necessário informações sobre o usuário logado. Também foi desenvolvido um método de verificação se o usuário é um administrador. Ao utilizar essa verificação, o sistema pode habilitar ou desabilitar determinados recursos, botões e atividades com base no perfil do usuário.
 
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/376b4456-3b3c-4fc9-9681-b707cf54fa3f) 
+![isAdmin](verificaIsAdmin.png) 
 
 Utilização dessa classe em um método que deleta os dados do cliente
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/0e1569f8-3cd2-4627-bb8f-016535e60b52)
+![exIsAdmin](exemploIsAdmin.png)
 
 
 
@@ -184,10 +184,10 @@ Utilização dessa classe em um método que deleta os dados do cliente
 A implementação de classes Helpers melhorou a organização do código, tornando as funções nas classes de controle mais compreensíveis. 
 
 Um exemplo é o método "converterData", que não apenas converte uma string para o tipo Date, mas também realiza verificações robustas e trata exceções quando necessario. Isso simplificou significativamente o manuseio de variáveis do tipo Date.   
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/9bb2ed96-b542-44f7-a9e4-87798cff1176)   
+![converterData](converterData.png)   
 
 Outro exemplo é o método "resultOperacao", feito para fornecer mensagens simples de log do sistema e mensagens visíveis na tela. Além disso, por meio de um parâmetro booleano, é possível determinar se a limpeza dos campos na view deve ser realizada.
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/2be7c409-0a09-4551-82c2-0c4825360eb8)  
+![resultOperacao](resultOperacao.png)  
 
  
 ---
@@ -196,7 +196,9 @@ Outro exemplo é o método "resultOperacao", feito para fornecer mensagens simpl
 
 A lógica de exclusão de agendamentos também foi feita com o objetivo de evitar a remoção dos agendamentos de outros profissionais. O processo de exclusão utiliza o **ID do agendamento**, que é obtido apenas ao selecionar um agendamento na tabela, sem ser possivel edita-lo. Importante ressaltar que a tabela exibe exclusivamente os agendamentos associados ao profissional atualmente logado.
 <br>Dessa forma, a exclusão é restrita aos agendamentos do profissional logado, garantindo a segurança dos dados. O sistema automaticamente captura o ID correspondente ao escolher um agendamento na tabela, assegurando que apenas os próprios compromissos possam ser removidos ou editados.
-![image](https://github.com/IgorWolf99/AppBarbeiro/assets/116234237/fff61540-fc6b-46e0-b3ea-82f22f0a7bc2)
+
+![capturaIdAgendamento](capturaIdAgendamento.png)
+
 <br>Essa é uma lógica simples desenvolvida, porém achei interessante compartilhar.
 
 ---
